@@ -11,8 +11,8 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 st.sidebar.header("⚙️ Connexion serveur")
-ollama_url = st.sidebar.text_input("URL Ollama", value="http://localhost:11434")
-model_name = st.sidebar.text_input("Nom du modèle", value="phi3.5-financial")
+ollama_url = st.sidebar.text_input("URL Ollama", value="http://20.199.64.120:11434")
+model_name = st.sidebar.text_input("Nom du modèle", value="techcorp-financial")
 
 
 def check_connection(base_url: str) -> tuple[bool, list[str]]:
@@ -57,6 +57,7 @@ if prompt:
 
     with st.chat_message("assistant"):
         placeholder = st.empty()
+        placeholder.markdown("⏳ Génération en cours (le serveur d'inférence est en CPU, cela peut prendre 1 à 2 minutes)...")
         full_response = ""
         try:
             response = requests.post(
@@ -67,7 +68,7 @@ if prompt:
                     "stream": True,
                 },
                 stream=True,
-                timeout=60,
+                timeout=180,
             )
             response.raise_for_status()
             for line in response.iter_lines():
