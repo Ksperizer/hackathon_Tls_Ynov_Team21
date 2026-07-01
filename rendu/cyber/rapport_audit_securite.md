@@ -168,3 +168,6 @@ Trois familles de risques ont été identifiées, par ordre de criticité :
 3. **MOYENNE — Absence de défense contre le prompt injection**, confirmée en conditions réelles (fuite du system prompt), à traiter avant d'y placer la moindre information sensible.
 
 Tant que ces trois points ne sont pas traités, le projet ne doit pas être considéré comme prêt pour une mise en production réelle avec accès à des données financières sensibles, conformément au scénario du brief.
+
+** Auteurs : ** 
+    - [Cazeneuve Kévin](https://github.com/Ksperizer)
