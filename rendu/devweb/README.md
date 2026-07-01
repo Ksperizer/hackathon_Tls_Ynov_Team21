@@ -16,8 +16,8 @@ L'interface s'ouvre sur `http://localhost:8501`.
 ## Configuration
 
 Dans la barre latérale :
-- **URL Ollama** : adresse du serveur d'inférence (défaut `http://localhost:11434`)
-- **Nom du modèle** : nom exact du modèle créé par l'INFRA avec `ollama create <nom> -f Modelfile` (défaut `phi3.5-financial`, à ajuster si l'INFRA a choisi un autre nom)
+- **URL Ollama** : adresse du serveur d'inférence (défaut `http://20.199.64.120:11434`, VM Azure de l'équipe INFRA)
+- **Nom du modèle** : nom exact du modèle créé par l'INFRA avec `ollama create <nom> -f Modelfile` (défaut `techcorp-financial`)
 
 ## Fonctionnalités
 
