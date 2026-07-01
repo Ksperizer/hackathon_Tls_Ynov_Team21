@@ -1,0 +1,4 @@
+# Dépendances filière DATA — analyse, nettoyage et préparation des datasets
+pandas>=2.0
+pyarrow>=14.0     # lecture du parquet médical (ruslanmv/ai-medical-chatbot)
+# (analyse et nettoyage des datasets financiers n'utilisent que la stdlib)
