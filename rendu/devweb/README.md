@@ -25,3 +25,7 @@ Dans la barre latérale :
 - Indicateur de statut connecté / déconnecté au serveur Ollama (basé sur `GET /api/tags`)
 - Réponses en streaming via `POST /api/chat`
 - Bouton pour effacer l'historique
+
+
+** Auteurs : ** 
+    - [Cazeneuve Kévin](https://github.com/Ksperizer)
