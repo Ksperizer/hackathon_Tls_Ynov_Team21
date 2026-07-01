@@ -37,6 +37,22 @@ observations réelles.
 - Entrée du ré-entraînement propre : `rendu/data/clean/finance_dataset_clean.json`
 - Preuves de la backdoor : `rendu/data/quarantine/` + `logs/`
 
-## À venir
-- **Notebook 2** — fine-tuning médical LoRA (Mission Expérimentale) sur
-  `rendu/data/clean/medical_dataset_clean.json` (5 000 exemples) : lien Colab + métriques (loss, epochs).
+## 📓 Notebook 2 — Fine-tuning médical LoRA (Mission Expérimentale)
+
+**Fichier :** [`finetuning_medical_lora.ipynb`](finetuning_medical_lora.ipynb)
+
+### Ce qu'il fait
+1. Reprend la logique de nettoyage DATA pour préparer le dataset médical
+   (`ruslanmv/ai-medical-chatbot`, mapping `Patient→instruction` / `Doctor→output`).
+2. Fine-tune un **LoRA (QLoRA 4-bit)** sur `microsoft/Phi-3-mini-4k-instruct`
+   (2 000 exemples POC, `MAX_STEPS` paramétrable).
+3. Trace la **courbe de loss** + affiche les métriques (loss initiale/finale, steps).
+4. Sauvegarde l'adaptateur et teste quelques prompts médicaux.
+
+### Lancer (Google Colab)
+1. Ouvrir le `.ipynb` dans **Colab**, **Runtime T4 GPU**.
+2. *Exécution → Tout exécuter* (~15-20 min).
+3. **Livrable :** *Fichier → Enregistrer une copie dans Drive → Partager* → coller le
+   lien Colab + la courbe de loss dans le rendu Moodle.
+
+> ⚠️ Modèle **expérimental**, non destiné à la production (cf. `medical_project/Readme.md`).
